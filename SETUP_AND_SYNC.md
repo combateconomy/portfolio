@@ -32,23 +32,37 @@ Copy-paste this to Cascade to resume instantly without wasting tokens:
 ## 2) FIRST-TIME SETUP ON A NEW COMPUTER (do once per machine)
 
 ### a) Check / install the basics
-    git --version        # should print a version (already installed here)
+    git --version        # should print a version
     node --version       # optional, only needed for Vercel CLI later
-Install Git (if missing): https://git-scm.com/download/mac  (or `xcode-select --install`)
-Install Node.js LTS (optional): https://nodejs.org
+
+**Mac:** Install Git (if missing): https://git-scm.com/download/mac  (or `xcode-select --install`)
+**Windows:** Install Git: https://git-scm.com/download/win  (includes Git Bash)
+**Both:** Install Node.js LTS (optional): https://nodejs.org
 
 ### b) Tell Git who you are (once per machine)
     git config --global user.name  "Michael Pereira"
     git config --global user.email "your-github-email@example.com"
 
 ### c) Log in to GitHub (easiest: GitHub CLI)
-    brew install gh        # if Homebrew is installed; else see cli.github.com
-    gh auth login          # choose GitHub.com > HTTPS > login with browser
+**Mac:**   brew install gh        # if Homebrew is installed; else see cli.github.com
+**Windows:** winget install --id GitHub.cli  # or download from cli.github.com
+**Both:**  gh auth login          # choose GitHub.com > HTTPS > login with browser
 
 ### d) Clone the portfolio from GitHub (gets the real, connected copy)
+**Mac:**
     cd ~/CascadeProjects
-    git clone <YOUR PORTFOLIO REPO URL>
-    cd <repo-folder-name>
+    git clone git@github.com:combateconomy/portfolio.git
+    cd portfolio
+
+**Windows (PowerShell):**
+    cd ~\CascadeProjects
+    git clone git@github.com:combateconomy/portfolio.git
+    cd portfolio
+
+**Windows (Git Bash):**
+    cd ~/CascadeProjects
+    git clone git@github.com:combateconomy/portfolio.git
+    cd portfolio
 
 > NOTE: On THIS computer the loose files in windsurf-project-5/portfolio are NOT
 > connected to GitHub. Prefer the freshly cloned folder above so pull/push work.
@@ -73,6 +87,12 @@ Install Node.js LTS (optional): https://nodejs.org
 - ALWAYS `git pull` BEFORE you start editing.
 - ALWAYS `git push` when you finish.
 - This is how each computer "pulls down the difference" — GitHub holds the truth.
+
+### Cross-platform note
+Git commands are IDENTICAL on Mac and Windows. The only difference is:
+- Mac uses forward slashes in paths: `~/CascadeProjects/portfolio`
+- Windows uses backslashes in PowerShell: `~\CascadeProjects\portfolio`
+- Git Bash on Windows uses forward slashes like Mac: `~/CascadeProjects/portfolio`
 
 ---
 
