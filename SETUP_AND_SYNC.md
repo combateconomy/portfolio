@@ -8,8 +8,9 @@
 ---
 
 ## 0) FILL THESE IN ONCE (your details)
-- GitHub username: __________________________
-- Portfolio repo URL (HTTPS): https://github.com/__________/__________.git
+- GitHub username: combateconomy
+- Portfolio repo URL (SSH): git@github.com:combateconomy/portfolio.git
+- Portfolio repo URL (HTTPS): https://github.com/combateconomy/portfolio.git
 - Vercel project name: ______________________
 - Live portfolio URL: _______________________
 - Contabo server IP (other projects only): __________________
